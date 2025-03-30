@@ -1,0 +1,6 @@
+@desafio_junior_backend_HostAddress = http://localhost:5124
+
+# GET {{desafio_junior_backend_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+###
