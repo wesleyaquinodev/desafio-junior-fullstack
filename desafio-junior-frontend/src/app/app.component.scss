@@ -1,0 +1,56 @@
+h1{
+    font-weight: 200;
+    text-align: center;
+}
+
+
+.form-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+h2{
+    font-weight: 400;
+    text-align: center;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+.card-group{
+    display: flex;
+    padding: 2rem;
+
+    .example-card {
+        max-width: 400px;
+    }
+    
+    .example-card-footer {
+        padding: 16px;
+    }
+}
+
+.icon-delete{
+    .mat-icon{
+        color: #ff0000;
+        float: left;
+        position: relative;
+        left: 230px;
+    }
+}
+
+.card-group mat-card:hover{
+    scale: 1.1;
+}
+
+
+textarea {
+    resize: none;
+}

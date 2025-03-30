@@ -1,0 +1,49 @@
+<h1>Desafio Fullstack Junior - Gerenciamento de Tarefas</h1>
+
+
+<form class="form-task" [formGroup]="formTask" (submit)="onSubmit()">
+    <h2>Cadastrar Tarefa</h2>
+    <mat-form-field appearance="outline">
+      <mat-label>Título</mat-label>
+      <input matInput placeholder="Título da Tarefa" [required]="true" formControlName="titulo">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput placeholder="Descrição da Tarefa" [required]="true" formControlName="descricao"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          @for (status of status; track status) {
+            <mat-option [value]="status.value">{{status.viewValue}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <div class="btn-group">
+        <button mat-stroked-button type="reset">Limpar</button>
+        <button mat-stroked-button>Cadastrar</button>
+      </div>
+</form>
+
+<div class="card-group">
+    <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+            <div class="icon-delete">
+                <mat-icon fontIcon="delete"></mat-icon>
+            </div>
+          <mat-card-title>Título</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{longText}}</p>
+        </mat-card-content>
+        <mat-card-footer class="example-card-footer">
+          <mat-chip-set aria-label="Chihuahua traits">
+            <mat-chip>Pendente</mat-chip>
+            <mat-chip>Em Andamento</mat-chip>
+            <mat-chip>Concluída</mat-chip>
+          </mat-chip-set>
+        </mat-card-footer>
+      </mat-card>
+</div>
